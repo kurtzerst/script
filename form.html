@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>test</title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  %%[
+
+  SET @PLZ = RequestParameter("PLZ")
+  SET @Verbrauch = RequestParameter("Verbrauch")
+  SET @Vorname = RequestParameter("Vorname")
+  SET @Nachname = RequestParameter("Nachname")
+  SET @Telefonnummer = RequestParameter("Telefonnummer")
+  SET @Company = CONCAT(@Vorname," ", @Nachname)
+  
+
+  
+  ]%%
+  %%= v(@PLZ) =%%
+  %%= v(@Verbrauch) =%%
+  %%= v(@Vorname) =%%
+  %%= v(@Nachname) =%%
+  %%= v(@Telefonnummer) =%%
+  %%= v(@Company) =%%
+
+  </body>
+</html>
